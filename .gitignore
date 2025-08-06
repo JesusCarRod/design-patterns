@@ -1,3 +1,8 @@
+# System
+.AppleDouble
+.DS_Store
+.LSOverride
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -27,8 +32,6 @@ share/python-wheels/
 MANIFEST
 
 # PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
 
@@ -205,3 +208,21 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Docker
+deploy/docker/data
+/.env*
+*.env
+!/.env.example
+docker-compose*local.yml
+
+# IDE
+/.run
+.project
+.settings
+src/utils/pysrc/
+pycharm-debug.egg
+.vscode/
+.idea
+pyrightconfig.json
+.junie

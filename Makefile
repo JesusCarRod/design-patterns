@@ -13,7 +13,7 @@ mypy-check:
 
 # Quality checks
 quality-checks:
-	@echo "$(CYAN)$(BOLD)-----------  Black formatting:  -----------$(NC)"
+	@echo "$(CYAN)$(BOLD)-----------  Black checkings:  -----------$(NC)"
 	@$(MAKE) format-check
 	@echo "\n$(CYAN)$(BOLD)-----------  MyPy checkings:  -----------$(NC)"
 	@$(MAKE) mypy-check

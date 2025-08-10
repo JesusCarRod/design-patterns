@@ -1,4 +1,4 @@
-from singleton import Singleton
+from creational.singleton.as_base_class.singleton import Singleton
 
 
 def main() -> None:

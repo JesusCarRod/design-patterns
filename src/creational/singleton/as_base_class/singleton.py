@@ -5,7 +5,7 @@ class Singleton:
     __instances: dict[type, Singleton] = {}
     __is_initialized: dict[type, bool] = {}
 
-    def __new__(cls) -> Singleton:
+    def __new__(cls, *args, **kwargs) -> Singleton:
         if cls not in Singleton.__instances:
             Singleton.__instances[cls] = super(Singleton, cls).__new__(cls)
         return Singleton.__instances[cls]

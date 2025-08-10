@@ -2,6 +2,11 @@ from __future__ import annotations
 
 
 class Singleton:
+    """
+    A base class to inherit from other classes and make them singleton.
+    It allows class inheritance but is not thread-safe.
+    """
+
     __instances: dict[type, Singleton] = {}
     __is_initialized: dict[type, bool] = {}
 

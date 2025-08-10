@@ -32,6 +32,22 @@ def main() -> None:
     print(a1 is not b1)
     print(a1 is not c)
 
+    print("Case 3: _setup method allows initializing custom class attributes")
+
+    class DatabaseConnection(Singleton):
+        def _setup(self, connection_string: str) -> None:
+            self.connection_string = connection_string
+
+    class Logger(Singleton):
+        def _setup(self, log_level: str) -> None:
+            self.log_level = log_level
+
+    db = DatabaseConnection(connection_string="postgresql://")
+    logger = Logger(log_level="INFO")
+
+    print(db.connection_string)
+    print(logger.log_level)
+
 
 if __name__ == "__main__":
     main()

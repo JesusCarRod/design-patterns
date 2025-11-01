@@ -1,21 +1,21 @@
-from functools import wraps
-from typing import Callable
+from typing import Callable, TypeVar, Any
+
+T = TypeVar("T")
 
 
 class Registry:
-    __registry: dict[str, type] = {}
+    __registry: dict[str, type[Any]] = {}
 
     @classmethod
-    def register(self, key: str) -> Callable[[type], type]:
-        def decorator(klass: type) -> type:
-            self.__registry[key] = klass
+    def register(cls, key: str) -> Callable[[type[T]], type[T]]:
+        def decorator(klass: type[T]) -> type[T]:
+            cls.__registry[key] = klass
             return klass
-
         return decorator
 
     @classmethod
-    def get(self, key: str):
-        klass = self.__registry.get(key)
+    def get(cls, key: str) -> Any:
+        klass = cls.__registry.get(key)
         if klass is None:
             raise ValueError(f"No class registered with key: {key}")
         return klass()

@@ -1,9 +1,5 @@
 from structural.registry.registry import Registry
-from structural.registry.message_senders import (
-    EmailMessageSender,
-    SmsMessageSender,
-    PushMessageSender,
-)
+from structural.registry.message_senders import EmailMessageSender, SmsMessageSender, PushMessageSender
 
 
 def main() -> None:

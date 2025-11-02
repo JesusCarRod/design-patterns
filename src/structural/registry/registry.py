@@ -11,6 +11,7 @@ class Registry:
         def decorator(klass: type[T]) -> type[T]:
             cls.__registry[key] = klass
             return klass
+
         return decorator
 
     @classmethod

@@ -14,9 +14,7 @@ def main() -> None:
 
     print(s1 is s2)
 
-    print(
-        "Case 2: Singleton classes are initialized once and different class hierarchies are not mixed"
-    )
+    print("Case 2: Singleton classes are initialized once and different class hierarchies are not mixed")
 
     class A(metaclass=SingletonMeta):
         pass
@@ -39,9 +37,7 @@ def main() -> None:
     print(a1 is not c)
     print(b1 is not c)
 
-    print(
-        "Case 3: Singleton classes can overwrite __new__ and __init__ without affection"
-    )
+    print("Case 3: Singleton classes can overwrite __new__ and __init__ without affection")
 
     class CheatingSingleton(metaclass=SingletonMeta):
         def __new__(cls, *args, **kwargs):

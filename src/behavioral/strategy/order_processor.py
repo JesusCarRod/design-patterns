@@ -18,9 +18,7 @@ class OrderProcessor:
         self.__discount_strategy_resolver = discount_strategy_resolver
 
     def process(self, amount: Decimal, client_type: ClientType) -> OrderResult:
-        strategy = self.__discount_strategy_resolver.resolve(
-            amount=amount, client_type=client_type
-        )
+        strategy = self.__discount_strategy_resolver.resolve(amount=amount, client_type=client_type)
         discount = strategy.calculate_discount(amount=amount)
 
         final_amount = amount - discount

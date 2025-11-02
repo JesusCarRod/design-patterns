@@ -28,11 +28,6 @@ class PDFReport(Report):
 
         if len(self.data) > 0:
             content.append("|".join(self.headers).upper())
-            content.extend(
-                [
-                    "|".join(str(row.get(header)) for header in self.headers)
-                    for row in self.data
-                ]
-            )
+            content.extend(["|".join(str(row.get(header)) for header in self.headers) for row in self.data])
 
         return "\n".join(content)

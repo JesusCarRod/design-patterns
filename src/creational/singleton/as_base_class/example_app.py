@@ -10,9 +10,7 @@ def main() -> None:
     s2 = Singleton()
     print(s1 is s2)
 
-    print(
-        "Case 2: Singleton classes are initialized once and different class hierarchies are not mixed"
-    )
+    print("Case 2: Singleton classes are initialized once and different class hierarchies are not mixed")
 
     class A(Singleton):
         pass

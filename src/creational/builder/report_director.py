@@ -54,9 +54,7 @@ class ReportDirector:
                 {
                     "report_type": "user",
                     "total_users": len(SAMPLE_USERS_DATA),
-                    "active_users": sum(
-                        1 for user in SAMPLE_USERS_DATA if user["active"] is True
-                    ),
+                    "active_users": sum(1 for user in SAMPLE_USERS_DATA if user["active"] is True),
                 }
             )
             .build()

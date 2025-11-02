@@ -27,6 +27,4 @@ class Singleton:
     def __init_subclass__(cls, **kwargs) -> None:
         super().__init_subclass__(**kwargs)
         if "__init__" in cls.__dict__:
-            raise TypeError(
-                f"Singleton subclass {cls.__name__} cannot override __init__. Use _setup() instead."
-            )
+            raise TypeError(f"Singleton subclass {cls.__name__} cannot override __init__. Use _setup() instead.")

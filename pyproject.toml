@@ -1,0 +1,14 @@
+[tool.black]
+line-length = 120
+target-version = ['py313']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  | \.git
+  | \.devcontainer
+  | \.idea
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+)/
+'''

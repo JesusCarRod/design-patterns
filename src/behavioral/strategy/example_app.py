@@ -9,9 +9,7 @@ from behavioral.strategy.order_processor import OrderProcessor
 def main() -> None:
     print("\n::::::::::::::::: Order processing :::::::::::::::::\n")
 
-    order_processor = OrderProcessor(
-        discount_strategy_resolver=DiscountStrategyResolver()
-    )
+    order_processor = OrderProcessor(discount_strategy_resolver=DiscountStrategyResolver())
 
     orders: list[tuple[Decimal, ClientType]] = [
         (Decimal("100"), ClientType.REGULAR),
@@ -20,9 +18,7 @@ def main() -> None:
         (Decimal("1500"), ClientType.VIP),
     ]
     for amount, client_type in orders:
-        print(
-            f"\nProcessing order with amount: {amount} and client type: {client_type}"
-        )
+        print(f"\nProcessing order with amount: {amount} and client type: {client_type}")
 
         result = order_processor.process(amount=amount, client_type=client_type)
 

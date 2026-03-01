@@ -29,7 +29,8 @@ def main() -> None:
         ]
     )
     print(f"Order created with id: {order.id}")
-    event_bus.publish(OrderCreatedEvent(order_id=order.id))
+    order_created_event = OrderCreatedEvent(order_id=order.id)
+    event_bus.publish(order_created_event)
 
 
 if __name__ == "__main__":

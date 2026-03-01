@@ -1,6 +1,5 @@
-from creational.builder.report_builder import ReportBuilder
 from creational.builder.report import Report
-
+from creational.builder.report_builder import ReportBuilder
 
 SAMPLE_SALES_DATA = [
     {"product": "Laptop", "quantity": 5, "total": 5000.00, "date": "2024-01-15"},

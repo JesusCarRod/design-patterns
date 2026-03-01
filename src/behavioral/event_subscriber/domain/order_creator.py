@@ -1,5 +1,5 @@
-from uuid import uuid4
 from datetime import datetime
+from uuid import uuid4
 
 from behavioral.event_subscriber.domain.order import Order, OrderItem
 

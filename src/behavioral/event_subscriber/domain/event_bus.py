@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+
 from behavioral.event_subscriber.domain.event import Event
 from behavioral.event_subscriber.domain.subscriber import Subscriber
 

@@ -1,8 +1,8 @@
 from decimal import Decimal
 from typing import ClassVar
 
-from behavioral.strategy.client_type import ClientType
 from behavioral.strategy.big_order_discount_strategy import BigOrderDiscountStrategy
+from behavioral.strategy.client_type import ClientType
 from behavioral.strategy.discount_strategy import DiscountStrategy
 from behavioral.strategy.no_discount_strategy import NoDiscountStrategy
 from behavioral.strategy.vip_discount_strategy import VipDiscountStrategy

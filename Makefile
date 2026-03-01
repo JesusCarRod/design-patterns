@@ -11,13 +11,21 @@ mypy-check:
 	@pipenv run mypy src
 
 
+# Import sorting
+isort:
+	@pipenv run isort src
+
+isort-check:
+	@pipenv run isort src --check-only
+
 # Quality checks
 quality-checks:
 	@echo "$(CYAN)$(BOLD)-----------  Black checkings:  -----------$(NC)"
 	@$(MAKE) format-check
 	@echo "\n$(CYAN)$(BOLD)-----------  MyPy checkings:  -----------$(NC)"
 	@$(MAKE) mypy-check
-
+	@echo "\n$(CYAN)$(BOLD)-----------  Isort checkings:  -----------$(NC)"
+	@$(MAKE) isort-check
 
 ##################### Helper constants
 # Colors

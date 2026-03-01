@@ -1,15 +1,15 @@
 from decimal import Decimal
 
-from behavioral.event_subscriber.infrastructure.sync_event_bus import SyncEventBus
-from behavioral.event_subscriber.domain.order_created_event import OrderCreatedEvent
 from behavioral.event_subscriber.application.update_inventory.order_created_subscriber import (
     OrderCreatedSubscriber as UpdateInventoryOrderCreatedSubscriber,
 )
 from behavioral.event_subscriber.application.update_user_loyalty.order_created_subscriber import (
     OrderCreatedSubscriber as UpdateUserLoyaltyOrderCreatedSubscriber,
 )
-from behavioral.event_subscriber.domain.order_creator import OrderCreator
 from behavioral.event_subscriber.domain.order import OrderItem
+from behavioral.event_subscriber.domain.order_created_event import OrderCreatedEvent
+from behavioral.event_subscriber.domain.order_creator import OrderCreator
+from behavioral.event_subscriber.infrastructure.sync_event_bus import SyncEventBus
 
 
 def main() -> None:

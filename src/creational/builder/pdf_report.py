@@ -1,5 +1,5 @@
-from enum import StrEnum
 from dataclasses import dataclass
+from enum import StrEnum
 
 from creational.builder.report import Report
 from creational.builder.report_format import ReportFormat

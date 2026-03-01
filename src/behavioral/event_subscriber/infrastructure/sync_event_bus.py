@@ -1,7 +1,6 @@
-from behavioral.event_subscriber.domain.event_bus import EventBus
 from behavioral.event_subscriber.domain.event import Event
+from behavioral.event_subscriber.domain.event_bus import EventBus
 from behavioral.event_subscriber.domain.subscriber import Subscriber
-from collections import defaultdict
 
 
 class SyncEventBus(EventBus):

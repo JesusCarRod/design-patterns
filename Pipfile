@@ -8,6 +8,7 @@ name = "pypi"
 [dev-packages]
 black = "==25.1.0"
 mypy = "==1.17.1"
+isort = "==8.0.1"
 
 [requires]
 python_version = "3.13"

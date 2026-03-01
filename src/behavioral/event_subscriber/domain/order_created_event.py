@@ -1,5 +1,6 @@
-from behavioral.event_subscriber.domain.event import Event
 from dataclasses import dataclass
+
+from behavioral.event_subscriber.domain.event import Event
 
 
 @dataclass(frozen=True)
